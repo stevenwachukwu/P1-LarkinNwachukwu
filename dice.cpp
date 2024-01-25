@@ -13,7 +13,7 @@ Dice::~Dice() {
 
 const int* Dice:: roll () {
     for (int j = 0; j < nDice; j++) {
-        diceVal [j] = rand();
+        diceVal [j] = rand()%6+1;
     }
     return diceVal;
 }
