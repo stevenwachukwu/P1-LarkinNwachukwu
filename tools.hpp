@@ -7,8 +7,8 @@
 // Please enter your own system, name, class, and printer stream name.
 // ---------------------------------------------------------------------------
 #pragma once
-#define NAME    "Alice Fischer"
-#define CLASS   "Exploring C++ : Chapter 11"
+#define NAME    "Steve Nwachukwu and Nick Larkin"
+#define CLASS   "CSCI 4526 - Advanced C++/OOPP"
 
 #include <iostream>
 #include <fstream>
