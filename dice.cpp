@@ -5,18 +5,19 @@ Dice::Dice(int n){
     diceVal = new int [nDice];
     srand(time(NULL));
 
-} //constructor
+} //constructor for the dice
 
 Dice::~Dice() {
     delete [] diceVal;
-} //destructor
+} //destructor for the dice
 
-const int* Dice:: roll () {
+const int* Dice::
+roll () {
     for (int j = 0; j < nDice; j++) {
         diceVal [j] = rand()%6+1;
     }
     return diceVal;
-}
+} //the dice value array
 
 ostream& Dice::print(ostream& diceOutput) {
     for (int j = 0; j < nDice; j++) {
@@ -24,4 +25,4 @@ ostream& Dice::print(ostream& diceOutput) {
     }
     return diceOutput;
 
-}
+} //print function for the program
