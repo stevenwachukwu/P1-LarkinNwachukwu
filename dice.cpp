@@ -21,7 +21,7 @@ roll () {
 
 ostream& Dice::print(ostream& diceOutput) {
     for (int j = 0; j < nDice; j++) {
-        diceOutput << diceVal [j];
+        diceOutput << diceVal [j] << " ";
     }
     return diceOutput;
 
