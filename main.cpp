@@ -5,40 +5,29 @@
 
 
 void UnitDice (){
-/*Getting the file we want to put the number of rolls*/
-    int nDice;
+  srand(time(nullptr)); // random number each time
+  
+  // Testing all numbers from 1 to 10 
+int nDice = rand() % 10 + 1  ; 
     banner() ;
-    printf("Please enter the number of rolls: 1-10 \n");
-    std::cin >> nDice;
-    /*Making it 1-10 rolls*/
-    if (nDice > 10){
-        nDice = nDice%10;
-    }
-    std::ofstream
-
-            Diceroll("Diceroll.txt",std::ios::app);
-
-    /* The not open messages */
-    if (!Diceroll.is_open()) {
-        std::cerr << "File not opened" << std::endl;
-        return; }
+    ofstream
+    Diceroll("Diceroll.txt",ios::app);
 
     Dice rolling(nDice);
-    Diceroll << "And your rolls are:" << std::endl;
+    Diceroll << "And your rolls are:" << endl;
     rolling.roll();
     rolling.print(Diceroll);
-    Diceroll << std::endl;
+    Diceroll << endl;
     Diceroll.close();
-
 }
 int main() {
-    /*Sending out to the file*/
+
+  /*Sending out to the file*/
     std::ofstream outputFile("Diceroll.txt",
-                             std::ios::app);
+    ios::app);
     /*Output if file can't open*/
     if (!outputFile.is_open()) {
-        std::cerr << "Error opening test-Diceroll.txt file." << std::endl;
-        return 1;
+       void fatal();
     }
     UnitDice();
     outputFile.close();
