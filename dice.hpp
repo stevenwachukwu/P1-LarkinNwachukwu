@@ -1,10 +1,7 @@
 #ifndef dice
 #define dice
 
-#include <iostream>
 #include "tools.hpp"
-
-using namespace std;
 
 class Dice {
 private:
@@ -16,7 +13,6 @@ public:
     ~Dice();
     ostream& print(ostream&);
     const int* roll();
-
 };
-inline ostream& operator << (ostream&, Dice&);
+inline ostream& operator << (ostream& output, Dice& d) {return d.print(output);}
 #endif
